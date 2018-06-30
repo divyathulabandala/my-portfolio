@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<link rel="stylesheet" type="text/css" href="custom-css1.css">
+</head>
+<body>
+<div class="background">
+<div class="nav">
+<a class="a active" href="#">HOME</a>
+<a class="b" href="#">ABOUT US</a>
+<a class="c" href="#">PROJECTS</a>
+<a class="d" href="#">CONTACT</a>
+
+</div>
+    <div class="content">
+        <div class="home">
+            <h1>DIVYA THULABANDALA</h1>
+                  <h2>Front end developer</h2>
+        </div>
+    <div class="aboutus">
+        <p>I am a positive person looking to pursue my career in a challenging and nourishing environment to reinforce my skills.I am a dedicated person with a family of four. I enjoy reading, and the knowledge and perspective that my reading gives me has strengthened my teaching skills and presentation abilities. I have been successful at raising a family, and I attribute this success to my ability to plan, schedule, and handle many different tasks at once. This flexibility will help me in the classroom, where there are many different personalities and learning styles.</p>
+        </div>
+        <div class="gallery">
+        <div class="image">
+            <img src="images/rabbit.jpg"/>
+            </div>
+            <div class="image">
+            <img src="images/hm.jpg"/>
+            </div>
+            <div class="image">
+            <img src="images/pixel.png"/>
+            </div>
+            
+        </div>
+        <div class="contactus">
+            <div class="contactform">
+                <form action="index.html" method="post">
+                <input type="text" name=""class="inputtext" value="First Name">
+                               <input type="text" name="" class="inputtext" value="Last Name">
+                <input type="text" name="" class="inputtext" value="Your Email">
+                    <textarea cols="4" rows="6" class="inputmessage" >Your Messages..!!</textarea>
+                    <input type="button" name="" class="submitbutton" value="Submit">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <Script type="text/javascript" src="jqery3.2.1.min.js"></Script>
+    <Script type="text/javascript">
+        $(document).ready(function(){
+            $('a').click(function(){
+              // alert("i am click");
+                var selected=$(this);
+                $('a').removeClass('active');
+                $(selected).addClass('active');
+            });
+        var $a=$('.a'),
+            $b=$('.b'),
+            $c=$('.c'),
+            $d=$('.d'),
+            $home=$('.home'),
+            $aboutus=$('.aboutus'),
+            $gallery=$('.gallery'),
+            $contactus=$('.contactus');
+            $a.click(function(){
+                $home.fadeIn();
+                 $aboutus.fadeOut();
+                $gallery.fadeOut();
+                $contactus.fadeOut();
+                
+            });
+            $b.click(function(){
+                $home.fadeOut();
+                $aboutus.fadeIn();
+                 $gallery.fadeOut();
+                $contactus.fadeOut();
+                
+            });
+            $c.click(function(){
+                $home.fadeOut();
+                $gallery.fadeIn();
+                 $aboutus.fadeOut();
+                $contactus.fadeOut();
+            });
+            $d.click(function(){
+                $home.fadeOut();
+                $aboutus.fadeOut();
+                  $gallery.fadeOut();
+                  $contactus.fadeIn();
+            });
+        });
+        
+        
+        
+    </Script>
+</body>
+</html>
